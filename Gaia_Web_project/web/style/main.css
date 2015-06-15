@@ -1,0 +1,82 @@
+/* I create some styles for test*/
+body {
+
+    font-size: 100%;
+    margin: auto;
+    width: 800px;
+}
+/* override */
+.nav nav-tabs {
+    font-size: 150%;
+}
+
+.IMG {
+    width: 300px;
+    height: auto;
+}
+.main_menu
+{
+    /*background: rgba(0, 0, 0, 0) linear-gradient(to bottom, #007e00 0%, #005b30 100%) repeat scroll 0 0;*/
+    border-radius: 5px;
+    float: left;
+    font-family: "Dosis",sans-serif;
+    padding: 1px 4px;
+    width: 500px;
+}
+
+.headerul
+{
+    float:right;
+    margin-top:150px;
+}
+.headerul li
+{
+    font-weight: bold;
+    display: inline;
+    border-style: solid;
+    border-color: green;
+    border-width: .8px;
+    border-radius:6px;
+    padding:4px 8px 4px 8px;
+    margin:auto;
+}	
+.menu {
+    float: right;
+    list-style-type: none;
+    margin-top: 50px;
+    width: 500px;
+    display: inline;
+}
+.menu li {
+    display: inline;
+    font-size: 11px;
+    font-weight: bold;
+    border-style: solid;
+    border-color: green;
+    border-width: .8px;
+    border-radius:6px;
+    padding:4px 8px 4px 8px;
+    margin:auto;
+}
+ul.menu li.divider {
+    background: rgba(0, 0, 0, 0) url("images/menu_divider.gif") no-repeat scroll center center;
+    display: inline;
+    float: left;
+    height: 50px;
+    width: 2px;
+}
+.headShop
+{
+    float:left;
+    width:150px;
+}
+.headShop ul li
+{
+    list-style-type: none;
+}
+
+.headSearch
+{
+    float: right;
+    margin-top:20px;
+}

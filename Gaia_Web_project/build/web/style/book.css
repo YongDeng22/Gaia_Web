@@ -1,0 +1,84 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 13, 2015, 11:29:54 PM
+    Author     : yongdeng
+*/
+
+/*.product_list {
+    width: 594px;
+    border-bottom: 2px solid black;
+    padding-bottom: 60px;
+    margin-left: 10px;
+}*/
+
+.product_left {
+    float:right;
+    width: 590px;
+    border-top: 1px solid lightgray;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    margin-left: 10px;
+}
+
+/*.product_left p {
+    width: 490px;
+    padding-top: 40px;
+}*/
+
+.book_img {
+    float:left;
+    margin: 5px 0px;
+}
+
+.product_discrp {
+    width: 380px;
+    padding-top: 40px;
+    float: left;
+}
+
+.price {
+    float: right;
+    width: 85px;
+    text-align: right;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.cart {
+    float:right;
+    padding-top: 10px;
+}
+
+.cart input {
+    padding-bottom: 4px;
+}
+
+.filter {
+    width: 500px;
+    float: right;
+/*    background-color: limegreen;*/
+}
+
+.filter input {
+    background-color: lightgreen;
+    height: 35px;
+    margin-bottom: 5px;
+    color: darkslategray;
+/*    font-size: 9pt;*/
+}
+
+.filter input:hover{
+    color:red;
+}
+
+.leftSideFilter {
+    background-color: palegreen;
+    margin-bottom: 15px;
+}
+.leftSideFilter input {
+    margin: 5px 5px 5px 30px;
+}
