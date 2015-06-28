@@ -17,7 +17,7 @@ and open the template in the editor.
 
 .product_left {
     float:right;
-    width: 590px;
+    width: 580px;
     border-top: 1px solid lightgray;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -31,13 +31,19 @@ and open the template in the editor.
 
 .book_img {
     float:left;
-    margin: 5px 0px;
+    margin: 5px 5px 0 0;
 }
 
 .product_discrp {
-    width: 380px;
+    width: 360px;
     padding-top: 40px;
     float: left;
+
+}
+
+.product_discrp p {
+    font-size: 14px;
+
 }
 
 .price {
@@ -58,7 +64,7 @@ and open the template in the editor.
 }
 
 .filter {
-    width: 500px;
+    width: 585px;
     float: right;
 /*    background-color: limegreen;*/
 }
@@ -68,7 +74,8 @@ and open the template in the editor.
     height: 35px;
     margin-bottom: 5px;
     color: darkslategray;
-/*    font-size: 9pt;*/
+    font-size: 11pt;
+    float:right;
 }
 
 .filter input:hover{
@@ -76,8 +83,9 @@ and open the template in the editor.
 }
 
 .leftSideFilter {
-    background-color: palegreen;
+    background-color: lightgray;
     margin-bottom: 15px;
+    font-size: 14px;
 }
 .leftSideFilter input {
     margin: 5px 5px 5px 30px;
