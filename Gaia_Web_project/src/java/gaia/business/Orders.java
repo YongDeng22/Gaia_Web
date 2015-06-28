@@ -55,9 +55,9 @@ public class Orders implements Serializable {
     @JoinColumn(name = "Customer_CustID", referencedColumnName = "CustID")
     @ManyToOne(optional = false)
     private Customer customer;
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "orders")
-    private OrderLine orderLine;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ordersOrderNumber")
+//    @OneToMany (cascade = CascadeType.ALL, mappedBy = "orders", targetEntity=OrderLine.class)
+//    private OrderLine orderLine;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ordersOrderNumber", targetEntity=OrderLine.class)
     private Collection<OrderLine> orderLineCollection;
 //    @OneToMany(mappedBy = "orderNumber")
 //    private Collection<CustomerReview> customerReviewCollection;
@@ -130,13 +130,13 @@ public class Orders implements Serializable {
         this.customer = customer;
     }
 
-    public OrderLine getOrderLine() {
-        return orderLine;
-    }
-
-    public void setOrderLine(OrderLine orderLine) {
-        this.orderLine = orderLine;
-    }
+//    public OrderLine getOrderLine() {
+//        return orderLine;
+//    }
+//
+//    public void setOrderLine(OrderLine orderLine) {
+//        this.orderLine = orderLine;
+//    }
 
     public Collection<OrderLine> getOrderLineCollection() {
         return orderLineCollection;

@@ -50,9 +50,8 @@
 
     <section class="invoice-section">
 
-                <h1>Your invoice: Order Number ${order.orderNumber}</h1>
-                <p>Order Number ${order.orderNumber}</p>
-                <p>Order date: ${order.purchaseDate}</p>
+                <h1>Your invoice: </h1>
+                <p>Order date: ${cart.date}</p>
 
                 <table>
                     <tr>
@@ -61,7 +60,7 @@
                         <th>Price</th>
                         <th>Subtotal</th>
                     </tr>
-                    <c:forEach var="item" items="${order.orderLineCollection}">
+                    <c:forEach var="item" items="${cart.items}">
                         <tr>
                             <td>${item.quantity}</td>
                             <td>${item.product.productName}</td>
@@ -73,11 +72,11 @@
 
                 <h4>Total: $${cart.total}</h4>
                 <p>Ship to: ${customer.firstName} ${customer.lastName}</p>
-                <p indent="9">         ${customer.street}</p>
-                <p indent="9">         ${customer.city} </p>
-                <p indent="9">         ${customer.states} ${customer.zip}</p>
-                <p indent="9">         ${customer.phone}</p>
-                <p indent="9">         ${customer.email}</p>
+                <p indent="9">${customer.street}</p>
+                <p indent="9">${customer.city} </p>
+                <p indent="9">${customer.states} ${customer.zip}</p>
+                <p indent="9">${customer.phone}</p>
+                <p indent="9">${customer.email}</p>
 
 
 <!--                <form action="<:url value='/checkout/displayUser' />" method="post" id="float_left">

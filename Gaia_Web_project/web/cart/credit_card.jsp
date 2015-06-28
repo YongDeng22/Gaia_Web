@@ -54,7 +54,7 @@
 
         <h3>Enter your credit card information</h3>
 
-        <form action="<c:url value='/checkout/completeOrder' />" method="post">
+        <form action="<c:url value='/checkout/completeOrder' />" method="POST">
             <table>
                 <tr> 
                     <td><b>Credit card type</b></td>

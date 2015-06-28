@@ -12,6 +12,7 @@ package gaia.controllers;
 
 import gaia.business.*;
 import gaia.data.*;
+import gaia.util.MailUtil;
 import java.io.IOException;
 import java.util.Collection;
 import java.util.Date;
@@ -26,25 +27,8 @@ public class CheckoutController extends HttpServlet {
             HttpServletResponse response)
             throws ServletException, IOException {
 
-        HttpSession session = request.getSession();
-
-        Orders order = new Orders();
-        Date purchaseDate = new Date();
-        Customer customer = (Customer) request.getAttribute("customer");
-        Cart cart = (Cart) session.getAttribute("cart");
-        Collection<OrderLine> orderLineCollection = cart.getItems();
-//        for (OrderLine line : cart.getItems()) {
-//            orderLineCollection.add(line);
-//        }
-        order.setOrderLineCollection(orderLineCollection);
-        order.setPurchaseDate(purchaseDate);
-        order.setCustomer(customer);
-        order.setCustID(customer);
-
-        session.setAttribute("order", order);
-
         String requestURI = request.getRequestURI();
-        String url = "";
+        String url = "/cart/cart.jsp";
         if (requestURI.endsWith("/checkUser")) {
             url = checkUser(request, response);
         } else if (requestURI.endsWith("/processUser")) {
@@ -126,35 +110,27 @@ public class CheckoutController extends HttpServlet {
     private String displayInvoice(HttpServletRequest request,
             HttpServletResponse response) {
         HttpSession session = request.getSession();
-
         Customer customer = (Customer) session.getAttribute("customer");
         Cart cart = (Cart) session.getAttribute("cart");
-
         java.util.Date today = new java.util.Date();
-
         Orders order = new Orders();
         order.setCustomer(customer);
         order.setPurchaseDate(today);
-        cart.getItems().stream().forEach((ol) -> {
-            order.setOrderLine(ol);
-        });
-
+        order.setOrderLineCollection(cart.getItems());
         session.setAttribute("order", order);
-
         return "/cart/invoice.jsp";
     }
 
     private String completeOrder(HttpServletRequest request,
             HttpServletResponse response) {
+
         HttpSession session = request.getSession();
         Customer customer = (Customer) session.getAttribute("customer");
         Orders order = (Orders) session.getAttribute("order");
-//        order.setCustomer(customer);
-        order.setIsProcessed(true);
-//        Collection<Orders> ordersCollection = customer.getOrdersCollection();
-//        ordersCollection.add(order);
-//        customer.setOrdersCollection(ordersCollection);
-//        customer.setCustomerReviewCollection(null);
+
+        OrderDB.insert(order);
+
+        session.setAttribute("cart", null);
 
         String creditCardType
                 = request.getParameter("creditCardType");
@@ -181,12 +157,11 @@ public class CheckoutController extends HttpServlet {
 //            OrderLineDB.insert(ol);
 //        }
         // remove all items from the user's cart
-        session.setAttribute("cart", null);
-
-        // send an email to the user to confirm the order.
-//        String to = customer.getEmail();
-//        String from = "custserv@gaias.com";
-//        String subject = "Order Confirmation";
+//        session.setAttribute("cart", null);
+        //send an email to the user to confirm the order.
+        String to = customer.getEmail();
+        String from = "custserv@gaias.com";
+        String subject = "Order Confirmation";
         String message = "Dear " + customer.getFirstName() + ",\n\n"
                 + "Thanks for ordering from us. "
                 + "You should receive your order in 3-5 business days. "
@@ -195,22 +170,22 @@ public class CheckoutController extends HttpServlet {
                 + "Joe King\n"
                 + "Gais&apos;s Plant World";
         session.setAttribute("message", message);
-//        boolean isBodyHTML = false;
-//        try {
-//            MailUtil.sendMail(to, from, subject, body, isBodyHTML);
-//        } catch (Exception e) {
-//            this.log(
-//                    "Unable to send email. \n"
-//                    + "You may need to configure your system as "
-//                    + "described in chapter 15. \n"
-//                    + "Here is the email you tried to send: \n"
-//                    + "=====================================\n"
-//                    + "TO: " + to + "\n"
-//                    + "FROM: " + from + "\n"
-//                    + "SUBJECT: " + subject + "\n"
-//                    + "\n"
-//                    + body + "\n\n");
-//        }
+        boolean isBodyHTML = false;
+        try {
+            MailUtil.sendMail(to, from, subject, message, isBodyHTML);
+        } catch (Exception e) {
+            this.log(
+                    "Unable to send email. \n"
+                    + "You may need to configure your system as "
+                    + "described in chapter 15. \n"
+                    + "Here is the email you tried to send: \n"
+                    + "=====================================\n"
+                    + "TO: " + to + "\n"
+                    + "FROM: " + from + "\n"
+                    + "SUBJECT: " + subject + "\n"
+                    + "\n"
+                    + message + "\n\n");
+        }
 
         return "/cart/complete.jsp";
     }

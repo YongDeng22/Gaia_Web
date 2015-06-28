@@ -30,6 +30,7 @@ public class CustomerDB {
         trans.begin();
         try {
             em.persist(customer);
+            em.flush();
             trans.commit();
         } catch (Exception e) {
             System.out.println(e);
@@ -45,6 +46,7 @@ public class CustomerDB {
         trans.begin();       
         try {
             em.merge(customer);
+            em.flush();
             trans.commit();
         } catch (Exception e) {
             System.out.println(e);

@@ -16,6 +16,7 @@ public class Cart implements Serializable {
 
     private List<OrderLine> items;
     private String total;
+    private Date date = new Date();
 
     public Cart() {
         items = new ArrayList<>();
@@ -29,6 +30,14 @@ public class Cart implements Serializable {
         return items;
     }
 
+    public Date getDate() {
+        return date;
+    }
+    
+    public void setDate(Date date) {
+        this.date=date;
+    }
+    
     public int getCount() {
         return items.size();
     }

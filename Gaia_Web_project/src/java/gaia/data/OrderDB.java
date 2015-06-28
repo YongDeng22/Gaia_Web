@@ -15,11 +15,13 @@ public class OrderDB {
         EntityTransaction trans = em.getTransaction();
         trans.begin();
         try {
-            for (OrderLine ol : order.getOrderLineCollection()) {
-                em.persist(ol);
-            }
             em.persist(order);
-
+            em.flush();
+            System.out.println(order.toString());
+            CustomerDB.update(order.getCustomer());
+            for (OrderLine ol : order.getOrderLineCollection()) {
+                OrderLineDB.insert(ol);
+            }
             trans.commit();
         } catch (Exception e) {
             System.out.println(e);

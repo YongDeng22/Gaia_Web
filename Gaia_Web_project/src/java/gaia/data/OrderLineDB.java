@@ -12,6 +12,7 @@ public class OrderLineDB {
         trans.begin();
         try {
         em.persist(orderLine);
+        em.flush();
         trans.commit();
         } catch (Exception e) {
             System.out.println(e);

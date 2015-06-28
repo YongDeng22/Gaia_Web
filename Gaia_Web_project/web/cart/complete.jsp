@@ -57,10 +57,10 @@
 
         <!-- store email address as a global variable and use EL to display it -->
 
-        <p>Your order has been submitted. We'll begin processing your 
-            order right away. If you have any questions about your order, 
-            please feel free to contact us at 
-            <a href="mailto:${custServEmail}">${custServEmail}</a></p>
+        <!--        <p>Your order has been submitted. We'll begin processing your 
+                    order right away. If you have any questions about your order, 
+                    please feel free to contact us at -->
+        <p>${message} <a href="mailto:${custServEmail}">${custServEmail}</a></p>
 
     </section>
 
