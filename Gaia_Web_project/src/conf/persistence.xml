@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="gaiaPU" transaction-type="RESOURCE_LOCAL">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <class>gaia.business.Orders</class>
+    <class>gaia.business.Customer</class>
+    <class>gaia.business.CustomerReview</class>
+    <class>gaia.business.Product</class>
+    <class>gaia.business.Plant</class>
+    <class>gaia.business.HardinessZone</class>
+    <class>gaia.business.Login</class>
+    <class>gaia.business.Book</class>
+    <class>gaia.business.Tools</class>
+    <class>gaia.business.PlantZone</class>
+    <class>gaia.business.PlantCategory</class>
+    <class>gaia.business.OrderLine</class>
+    <class>gaia.business.Dvd</class>
+    <class>gaia.business.Cart</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/Gaia"/>
+      <property name="javax.persistence.jdbc.user" value="gaia_user"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.password" value="gaia"/>
+      <property name="javax.persistence.schema-generation.database.action" value="create"/>
+    </properties>
+  </persistence-unit>
+</persistence>

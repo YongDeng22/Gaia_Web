@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 27, 2015, 1:42:28 PM
+    Author     : yongdeng
+*/
+
+
+.thanks-section {
+    width: 580px;
+    float: right;
+    margin:5px;
+}
+
+.thanks-section label {
+    font-size: 14px;
+    margin: 10px 10px;
+}
+
+.thanks-section input {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: lightgreen;
+    /*    height: 40px;*/
+}
+
+.register-section {
+    width: 580px;
+    float: right;
+    margin:5px;
+    alignment-baseline: hanging;
+}
+.register-section div{
+    width: 570px;
+    float: left;
+    margin:5px;
+    /*    alignment-baseline: hanging;*/
+}
+
+.register-section label {
+    font-size: 14px;
+    /*    margin: 5px 5px;*/
+    width: 140px;
+    height: 30px;
+    float:left;
+}
+
+.register-section input {
+    font-size: 14px;
+    /*    font-weight: bold;*/
+    width: 412px;
+    /*    margin-top: 10px;*/
+    float: left;
+    background-color: lightgray;
+    height: 20px;
+}
+
+.register-section input[type="submit"] {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100px;
+    /*    width: 450px;*/
+    /*    margin-top: 10px;*/
+    background-color: lightgreen;
+    height: 40px;
+    clear:both;
+}
+
+.invoice-section {
+    width: 580px;
+    float: left;
+    margin: 10px;
+}
+.invoice-section table{
+    border-collapse: collapse;
+    width: 590px;
+    border: 2px solid darkgreen;
+    text-align: left;
+}
+
+.invoice-section table th, td {
+    border-collapse: collapse;
+    border: 1px solid darkgreen;
+}
+
+.invoice-section input[type="submit"]{
+    width: 150px;
+    float:left;
+    font-size: 16px;
+    background-color: lightgreen;
+}
+
+.invoice-section p{
+    font-size: 14px;
+}
+
+.card-section {
+    width: 580px;
+    float: left;
+    margin: 10px;
+}
+
+.card-section table{
+    border-collapse: collapse;
+    width: 590px;
+    border: 2px solid darkgreen;
+    text-align: left;
+    font-size: 14px;
+}
+
+/*.invoice-section table th {
+    border-collapse: collapse;
+    border: 1px solid darkgreen;
+    width: 200px;
+}
+
+.invoice-section table td {
+    border-collapse: collapse;
+    border: 1px solid darkgreen;
+    width: 300px;
+}*/
+
+.card-section input{
+    width: 400px;
+    float:right;
+    font-size: 14px;
+    background-color: lightgray;
+    height:30px;
+}
+
+.card-section input[type="submit"]{
+    width: 150px;
+    float:right;
+    font-size: 16px;
+    background-color: lightgreen;
+}
+

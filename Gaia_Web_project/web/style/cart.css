@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 20, 2015, 10:52:59 PM
+    Author     : yongdeng
+*/
+
+#cart_table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    vertical-align: middle;
+    padding: 5px;
+    text-align: left;
+    width:auto;
+    height: 25px;
+}
+
+#cart_table tr th, td {
+    border:1px solid black;
+    padding: 5px;
+}
+
+/*.cart th {
+    text-align: left;
+    width:auto;
+    height: 20px;
+    border: 1px solid black;
+    padding: 5px;
+}*/
+
+
+.cart_price {
+    text-align: right;
+}
+
+.cart_row {
+    font-size: 14px;
+}
+
+.cart_row input {
+    width: 30px;
+    height: 20px;
+    font-size:14px
+}
+
+.cart_quantity_box {
+    float: left;
+    width: 40px;
+}
+
+.cart_update_button {
+    width: 60px;
+    float: left;
+}
+
+input[type="submit"], textarea {
+    background-color : lightgreen; 
+    font-size: 14px;
+    height:30px;
+    width: 60px;
+}
+
+.cart_info {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+/*
+.cart_info p{
+    font-size: 12px;
+}*/
+
+
+#continue-shopping input[type="submit"]{
+    width: 150px;
+}

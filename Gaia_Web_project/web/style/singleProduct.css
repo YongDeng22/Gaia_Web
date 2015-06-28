@@ -1,0 +1,163 @@
+
+/* the styles for the navigation bar */
+
+.single_product_head {
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.headlink {
+    clear: both;
+    list-style: none;
+    /*	padding: 1em 0;        padding above and below li elements */
+    display: inline; 
+}
+/* the styles for the aside */
+/*aside {
+    clear: right;
+    padding: 5px;
+    margin-left:0;
+    	width: 300px;
+    float: left;
+}*/
+
+/*.single_product_img ul {
+    display: block;
+}*/
+
+.image_single_list {
+    float: left;
+    padding: 10px 7px 10px 0px;
+}
+
+/*aside img {
+        width: 50px;
+        height: auto;
+}
+aside p img {
+        width: 150px;
+        height: auto;
+}*/
+/* the styles for the image swap list */ 
+#image_list {
+    padding: 5px 10px 5px 0px;
+
+    /*	float: left;*/
+}
+/*aside #image_list a {
+        border:none;
+}*/
+/* the styles for the section */
+
+.product_title {
+    color: hsl(120, 75%, 75%);
+    font-size: 140%;
+    padding: .5em 0 .25em;
+    padding-left: 10px;
+    float: left;
+    width: 398px;
+}
+/*section h2 {
+        font-size: 120%;
+        padding: 1em 0;
+}
+section p {
+        font-size: 80%;
+        padding-bottom: 1em;
+        border-bottom: 1px solid lightgray;
+}*/
+
+.single_product_img {
+    float: left;
+    padding: 5px;
+    padding-top: 5px;
+    width: 250px;
+}
+
+.single_large_img {
+    float: left;
+}
+
+.single_small_image_list {
+    clear: both;
+}
+.image_single_list {
+    float: left;
+}
+
+.single_prod_details {
+    float: right;
+    width: 500px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 15px;
+    border: 2px solid darkgreen;
+    padding: 5px;
+/*    padding-top: 5px;*/
+    padding-right: 5px;
+    height:auto;
+    text-align: right;
+}
+
+.single_prod_details p {
+    font-size: 12px;
+}
+
+.single_product_title h1 {
+    font-size: 16px;
+}
+
+.single_product_title p {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.jquery_single_product_info {
+    clear: both;
+    margin: 5px;
+    padding: 5px;
+    border: 2px solid darkgreen;
+}
+
+.price {
+    float: right;
+    font-size: 120%;
+    text-align: right;
+}
+.single_product_cart input{
+    /*    float:right;*/
+    padding-top: 5px;
+    padding-right:5px;
+    font-size: 20px;
+    /*    background-color: lightgreen;*/
+    /*    width: 50px;*/
+}
+
+.single_product_cart p{
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.single_top_info {
+    width: 800px;
+}
+
+.single_overview {
+    text-align: left;
+}
+
+
+html > body > nav.single_product_head > ul.headlink > li > a {
+    background-color: beige;
+}
+/*.cart input {
+    padding-bottom: 1px;
+}
+
+.overview {
+    font-size: 100%;
+    width: 540px;
+    float: right;
+}*/
+

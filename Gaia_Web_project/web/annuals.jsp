@@ -1,6 +1,6 @@
 <%-- 
-    Document   : books
-    Created on : Jun 13, 2015, 10:45:12 PM
+    Document   : annuals
+    Created on : Jun 17, 2015, 10:25:30 AM
     Author     : yongdeng
 --%>
 
@@ -54,7 +54,7 @@
             </ul>
         </nav>
 
-        <form action="" method="POST" class="leftSideFilter">
+        <form action="" methos="POST" class="leftSideFilter">
             <div class="title_box">Price</div>
             <input type="checkbox" name="ten" value="10">$0-$10<br>
             <input type="checkbox" name="twenty" value="15">$10-$20<br>
@@ -62,18 +62,18 @@
             <input type="checkbox" name="gtthirty" value="15">Above $30<br>
         </form>
 
-        <form action="" method="POST" class="leftSideFilter">
-            <div class="title_box">Year</div>
-            <input type="checkbox" name="2000" value="2000">Before 2000<br>
-            <input type="checkbox" name="2005" value="2005">2000-2005<br>
-            <input type="checkbox" name="2010" value="2010">2005-2010<br>
-            <input type="checkbox" name="2015" value="2015">After 2010<br>
+        <form action="" methos="POST" class="leftSideFilter">
+            <div class="title_box">Hardiness Zone</div>
+            <input type="checkbox" name="zone1" value="1">0-2<br>
+            <input type="checkbox" name="zone2" value="2">3-6<br>
+            <input type="checkbox" name="zone3" value="3">7-9<br>
+            <input type="checkbox" name="zone4" value="4">10-12<br>
         </form>
 
-<!--        <div class="title_box">Newsletter</div>-->
+<!--        <div class="title_box">Newsletter</div>
 
-        <!--    changed to form-->
-<!--        <form class="border_box" methods="POST">
+            changed to form
+        <form class="border_box" methods="POST">
             <input type="text" name="newsletter" class="newsletter_input" value="your email"/>
             <a href="#" class="join">join</a> 
         </form>-->
@@ -88,154 +88,172 @@
             <input type="submit" name="high" value="Price&nbsp;(low&nbsp;to&nbsp;high)">
             <input type="submit" name="rating" value="Customer&nbsp;Ratings">
         </form>
+
         
-        <section class="product_left">
+                <section class="product_left">
 <!--            <a class="book_img" href="">
                 <img src="image/books/200011.jpg" alt="book image" width="120"/>
             </a>-->
             
-            <form action="<c:url value='display/displayBook'/>" name="book" method="POST">
+            <form action="<c:url value='display/displayPlant'/>" name="plant" method="POST">
                 <div class="book_img">
-                    <input type="image" src="image/books/200011.jpg" alt="single product" width="120">
-                    <input type="hidden" name="productCode" value="200011">
+                    <input type="image" src="image/annual/200001.jpg" alt="single product" width="120">
+                    <input type="hidden" name="productCode" value="200001">
                 </div>
             </form>            
             
             <div class="product_discrp">
-                <p>Ultimate Gardening Book: 5 Gardening Books in 1</p>
+                <p>Supertunia Royal Velvet Petunia</p>
             </div>
             <form action="<c:url value='order/addItem'/>" name="cart" class="price" method="POST">
-                <p>$5.00</p>
+                <p>$9.99</p>
                 <div class="carts">
                     <input type="image" src="image/cart.png" alt="submit Button" width="60">
-                    <input type="hidden" name="productCode" value="200011">
+                    <input type="hidden" name="productCode" value="200001">
                     <p>Add to cart</p></div>
             </form>
         </section>
+        
                 
-                 <section class="product_left">
+                                <section class="product_left">
 <!--            <a class="book_img" href="">
                 <img src="image/books/200011.jpg" alt="book image" width="120"/>
             </a>-->
             
-            <form action="<c:url value='display/displayBook'/>" name="book" method="POST">
+            <form action="<c:url value='display/displayPlant'/>" name="plant" method="POST">
                 <div class="book_img">
-                    <input type="image" src="image/books/200012.jpg" alt="single product" width="120">
-                    <input type="hidden" name="productCode" value="200012">
+                    <input type="image" src="image/annual/200002.jpg" alt="single product" width="120">
+                    <input type="hidden" name="productCode" value="200002">
                 </div>
             </form>            
             
             <div class="product_discrp">
-                <p>Gardening: Raised Bed Gardening: Vegetable and Flower Growing Made Easy!</p>
+                <p>June Plantain Lily</p>
             </div>
             <form action="<c:url value='order/addItem'/>" name="cart" class="price" method="POST">
-                <p>$6.00</p>
+                <p>$9.99</p>
                 <div class="carts">
                     <input type="image" src="image/cart.png" alt="submit Button" width="60">
-                    <input type="hidden" name="productCode" value="200012">
+                    <input type="hidden" name="productCode" value="200002">
                     <p>Add to cart</p></div>
             </form>
         </section>
-                
-                
-                  <section class="product_left">
+        
+        
+         <section class="product_left">
 <!--            <a class="book_img" href="">
                 <img src="image/books/200011.jpg" alt="book image" width="120"/>
             </a>-->
             
-            <form action="<c:url value='display/displayBook'/>" name="book" method="POST">
+            <form action="<c:url value='display/displayPlant'/>" name="plant" method="POST">
                 <div class="book_img">
-                    <input type="image" src="image/books/200013.jpg" alt="single product" width="120">
-                    <input type="hidden" name="productCode" value="200013">
+                    <input type="image" src="image/annual/200003.jpg" alt="single product" width="120">
+                    <input type="hidden" name="productCode" value="200003">
                 </div>
             </form>            
             
             <div class="product_discrp">
-                <p>The Beginner's Guide to Gardening</p>
+                <p>Incrediball Hydrangea Shrub</p>
             </div>
             <form action="<c:url value='order/addItem'/>" name="cart" class="price" method="POST">
-                <p>$9.00</p>
+                <p>$5.12</p>
                 <div class="carts">
                     <input type="image" src="image/cart.png" alt="submit Button" width="60">
-                    <input type="hidden" name="productCode" value="200013">
+                    <input type="hidden" name="productCode" value="200003">
                     <p>Add to cart</p></div>
             </form>
         </section>
+        
                 
-                
-                   <section class="product_left">
+                         <section class="product_left">
 <!--            <a class="book_img" href="">
                 <img src="image/books/200011.jpg" alt="book image" width="120"/>
             </a>-->
             
-            <form action="<c:url value='display/displayBook'/>" name="book" method="POST">
+            <form action="<c:url value='display/displayPlant'/>" name="plant" method="POST">
                 <div class="book_img">
-                    <input type="image" src="image/books/200014.jpg" alt="single product" width="120">
-                    <input type="hidden" name="productCode" value="200014">
+                    <input type="image" src="image/annual/200004.jpg" alt="single product" width="120">
+                    <input type="hidden" name="productCode" value="200004">
                 </div>
             </form>            
             
             <div class="product_discrp">
-                <p>Gardening: The Ultimate Beginner's Guide</p>
+                <p>Cateracterum Palm</p>
             </div>
             <form action="<c:url value='order/addItem'/>" name="cart" class="price" method="POST">
-                <p>$12.00</p>
+                <p>$7.98</p>
                 <div class="carts">
                     <input type="image" src="image/cart.png" alt="submit Button" width="60">
-                    <input type="hidden" name="productCode" value="200014">
+                    <input type="hidden" name="productCode" value="200004">
                     <p>Add to cart</p></div>
             </form>
         </section>
                 
-                
-<!--
-        <section class="product_left">
+<!--        <section class="product_left">
             <a class="book_img" href="">
-                <img src="image/books/200012.jpg" alt="book image" width="120"/>
+                <img src="image/annual/200001.jpg" alt="" width="120"/>
             </a>
             <div class="product_discrp">
-                <p>Gardening: Raised Bed Gardening: Vegetable and Flower Growing Made Easy!</p>
+                <p>Supertunia Royal Velvet Petunia</p>
             </div>
-            <form action="<c:url value='order/addItem'/>" name="cart" class="price" method="POST">
-                <p>$6.00</p>
-                <div class="carts">
+            <form action="" name="" class="price">
+                <p>$9.99</p>
+                <div class="cart">
                     <input type="image" src="image/cart.png" alt="submit Button" width="60">
-                    <input type="hidden" name="productCode" value="200012">
+                    <input type="hidden" name="productCode" value="200001">
                     <p>Add to cart</p></div>
             </form>
         </section>  -->
 
 <!--        <section class="product_left">
             <a class="book_img" href="">
-                <img src="image/books/200013.jpg" alt="book image" width="120"/>
+                <img src="image/annual/200002.jpg" alt="" width="120"/>
             </a>
             <div class="product_discrp">
-                <p>The Beginner's Guide to Gardening</p>
+                <p>June Plantain Lily</p>
             </div>
-            <form action="<c:url value='order/addItem'/>" name="cart" class="price" method="POST">
-                <p>$9.00</p>
-                <div class="carts">
+            <form action="" name="" class="price">
+                <p>$18.95</p>
+                <div class="cart">
                     <input type="image" src="image/cart.png" alt="submit Button" width="60">
-                    <input type="hidden" name="productCode" value="200013">
+                    <input type="hidden" name="productCode" value="200002">
                     <p>Add to cart</p></div>
             </form>
-        </section>  
+        </section>  -->
 
+<!--        <section class="product_left">
+            <a class="book_img" href="">
+                <img src="image/annual/200003.jpg" alt="" width="120"/>
+            </a>
+            <div class="product_discrp">
+                <p>Incrediball Hydrangea Shrub</p>
+            </div>
+            <form action="" name="" class="price">
+                <p>$5.12</p>
+                <div class="cart">
+                    <input type="image" src="image/cart.png" alt="submit Button" width="60">
+                    <input type="hidden" name="productCode" value="200003">
+                    <p>Add to cart</p></div>
+            </form>
+        </section>  -->
+<!--
         <section class="product_left">
             <a class="book_img" href="">
-                <img src="image/books/200014.jpg" alt="book image" width="120"/>
+                <img src="image/annual/200004.jpg" alt="" width="120"/>
             </a>
             <div class="product_discrp">
-                <p>Gardening: The Ultimate Beginner's Guide</p>
+                <p>Cateracterum Palm</p>
             </div>
-            <form action="<c:url value='order/addItem'/>" name="cart" class="price" method="POST">
-                <p>$12.00</p>
-                <div class="carts">
+            <form action="" name="" class="price">
+                <p>$7.98</p>
+                <div class="cart">
                     <input type="image" src="image/cart.png" alt="submit Button" width="60">
-                    <input type="hidden" name="productCode" value="200014">
+                    <input type="hidden" name="productCode" value="200005">
                     <p>Add to cart</p></div>
             </form>
-        </section>    -->
+        </section>  -->
+
+
     </section>
 
 

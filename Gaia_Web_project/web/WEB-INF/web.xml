@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+        <!-- define a context initialization parameter -->
+    <context-param>
+        <param-name>custServEmail</param-name>
+        <param-value>custserv@gaias.com</param-value>
+    </context-param>
+    
+    <servlet>
+        <servlet-name>OrderController</servlet-name>
+        <servlet-class>gaia.controllers.OrderController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DisplayController</servlet-name>
+        <servlet-class>gaia.controllers.DisplayController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HardinessZoneController</servlet-name>
+        <servlet-class>gaia.controllers.HardinessZoneController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SearchController</servlet-name>
+        <servlet-class>gaia.controllers.SearchController</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>OrderController</servlet-name>
+        <url-pattern>/order/*</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>CatalogController</servlet-name>
+        <servlet-class>gaia.controllers.CatalogController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CatalogController</servlet-name>
+        <url-pattern>/catalog/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DisplayController</servlet-name>
+        <url-pattern>/display/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HardinessZoneController</servlet-name>
+        <url-pattern>/HardinessZone/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SearchController</servlet-name>
+        <url-pattern>/searching</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CheckoutController</servlet-name>
+        <servlet-class>gaia.controllers.CheckoutController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckoutController</servlet-name>
+        <url-pattern>/checkout/*</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CustomerController</servlet-name>
+        <servlet-class>gaia.controllers.CustomerController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerController</servlet-name>
+        <url-pattern>/customer/*</url-pattern>
+    </servlet-mapping>
+    
+<!--    <servlet-mapping>
+        <servlet-name>CustomerController</servlet-name>
+        <url-pattern>/j_security_check</url-pattern>
+    </servlet-mapping>-->
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    
+    <!--set inital text for login/sign in/logout link in the header-->
+<!--    <context-param>
+        <init-param> 
+            <param-name>loginLinkLabel</param-name>
+            <param-value>Login</param-value>
+        </init-param>
+    </context-param>
+    -->
+</web-app>
