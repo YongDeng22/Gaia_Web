@@ -17,14 +17,15 @@ public class OrderDB {
         try {
             em.persist(order);
             em.flush();
-            System.out.println(order.toString());
+            /*
             CustomerDB.update(order.getCustomer());
             for (OrderLine ol : order.getOrderLineCollection()) {
                 OrderLineDB.insert(ol);
             }
+                    */
             trans.commit();
         } catch (Exception e) {
-            System.out.println(e);
+            e.printStackTrace();
             trans.rollback();
         } finally {
             em.close();

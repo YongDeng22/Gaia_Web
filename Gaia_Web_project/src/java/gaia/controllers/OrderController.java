@@ -88,45 +88,6 @@ public class OrderController extends HttpServlet {
         }
         session.setAttribute("cart", cart);
         return defaultURL;
-
-//        Cart cart = (Cart) session.getAttribute("cart");
-//        Orders order = (Orders) session.getAttribute("order");
-//
-//        if (cart == null) {
-//            cart = new Cart();
-//        }
-//        String productCode = request.getParameter("productCode");
-//        Product product = ProductDB.selectProduct(Integer.parseInt(productCode));
-//        if (product != null) {
-//            List<OrderLine> orderlineList = cart.getItems();
-//            OrderLine orderline = new OrderLine();
-//
-//            if (order != null) {
-//                orderline.setProduct(product);
-////                orderline.setOrderNumber(order.getOrderNumber());
-//                orderline.setQuantity(orderline.getQuantity());
-//                orderlineList.add(orderline);
-//                order.setOrderLineCollection(orderlineList);
-//            } else {
-//                order = new Orders();
-//
-//                orderline.setProduct(product);
-////                orderline.setOrderNumber(order.getOrderNumber());
-//                orderline.setQuantity(orderline.getQuantity());
-//                orderlineList.add(orderline);
-//                order.setOrderLineCollection(orderlineList);
-//            }
-//            Double subTotal = 0.;
-//            for (OrderLine ol : cart.getItems()) {
-//                ol.setSubTotal(String.format("%.2f", ol.getQuantity() * ol.getProduct().getPrice()));
-//            }
-////            orderline.setSubTotal(String.format(".2f", subTotal));
-//            cart.addItem(orderline);
-
-
-//        session.setAttribute("cart", cart);
-//        session.setAttribute("order", order);
-//        return defaultURL;
     }
 
     private String updateItem(HttpServletRequest request,

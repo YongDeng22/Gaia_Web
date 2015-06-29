@@ -109,15 +109,18 @@ public class CheckoutController extends HttpServlet {
 
     private String displayInvoice(HttpServletRequest request,
             HttpServletResponse response) {
+        System.out.println("********** CheckoutController.displayInvoice()");
         HttpSession session = request.getSession();
         Customer customer = (Customer) session.getAttribute("customer");
         Cart cart = (Cart) session.getAttribute("cart");
-        java.util.Date today = new java.util.Date();
-        Orders order = new Orders();
-        order.setCustomer(customer);
-        order.setPurchaseDate(today);
-        order.setOrderLineCollection(cart.getItems());
-        session.setAttribute("order", order);
+//        java.util.Date today = new java.util.Date();
+//        Orders order = new Orders();
+//        order.setCustID(customer);
+//        order.setCustomer(customer);
+//        order.setPurchaseDate(today);
+//        order.setOrderLineCollection(cart.getItems());
+//        session.setAttribute("order", order);
+//        System.out.println("********** DONE");
         return "/cart/invoice.jsp";
     }
 
@@ -125,13 +128,27 @@ public class CheckoutController extends HttpServlet {
             HttpServletResponse response) {
 
         HttpSession session = request.getSession();
+        Cart cart = (Cart) session.getAttribute("cart");
         Customer customer = (Customer) session.getAttribute("customer");
-        Orders order = (Orders) session.getAttribute("order");
 
+        java.util.Date today = new java.util.Date();
+        Orders order = new Orders();
+        order.setCustID(customer);
+        order.setCustomer(customer);
+        order.setPurchaseDate(today);
+        for (OrderLine orderLine : cart.getItems()) {
+            orderLine.setOrders(order);
+        }
+        order.setOrderLineCollection(cart.getItems());
+
+//        System.out.println("********** Customer: " + customer);
+//        System.out.println("********** Cart: " + cart);
+//        System.out.println("********** Order: " + order);
         OrderDB.insert(order);
 
         session.setAttribute("cart", null);
-
+        session.setAttribute("order", order);
+        
         String creditCardType
                 = request.getParameter("creditCardType");
         String creditCardNumber

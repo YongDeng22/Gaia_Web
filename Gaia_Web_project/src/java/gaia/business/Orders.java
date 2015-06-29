@@ -65,6 +65,7 @@ public class Orders implements Serializable {
 //    private String orderTotal;
 
     public Orders() {
+        isProcessed = false;
     }
 
     public Orders(Integer orderNumber) {
