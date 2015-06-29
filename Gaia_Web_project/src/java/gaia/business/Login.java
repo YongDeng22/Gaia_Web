@@ -29,6 +29,7 @@ import javax.persistence.Table;
     @NamedQuery(name = "Login.findByPassword", query = "SELECT l FROM Login l WHERE l.password = :password"),
     @NamedQuery(name = "Login.findByAlert", query = "SELECT l FROM Login l WHERE l.alert = :alert")})
 public class Login implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -44,6 +45,8 @@ public class Login implements Serializable {
     @JoinColumn(name = "Customer_CustID", referencedColumnName = "CustID")
     @OneToOne
     private Customer customerCustID;
+    @Column(name = "UserRole")
+    private String userRole;
 
     public Login() {
     }
@@ -74,6 +77,14 @@ public class Login implements Serializable {
 
     public void setAlert(Character alert) {
         this.alert = alert;
+    }
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
     }
 
     public Customer getCustID() {
@@ -116,5 +127,5 @@ public class Login implements Serializable {
     public String toString() {
         return "gaia.business.Login[ userName=" + userName + " ]";
     }
-    
+
 }
