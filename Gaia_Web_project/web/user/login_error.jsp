@@ -36,19 +36,19 @@
         </ul>
         <div class="title_box">Guide</div>
         <ul class="left_menu">
-            <li class="odd"><a href="#">Fall Containers</a></li>
-            <li class="even"><a href="#">Meet Cool Wave</a></li>
-            <li class="odd"><a href="#">Tips:Planting</a></li>
-            <li class="even"><a href="#">Plant, Trees and Shrubs</a></li>
-            <li class="odd"><a href="#">Easy Care Garden</a></li>
-            <li class="even"><a href="#">Plant a Bulb Garden</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Fall Containers</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Meet Cool Wave</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Tips:Planting</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Plant, Trees and Shrubs</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Easy Care Garden</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Plant a Bulb Garden</a></li>
         </ul>
-<!--        <div class="title_box">Newsletter</div>
-        <div class="border_box">
-            <input type="text" name="newsletter" class="newsletter_input" value="your email"/>
-            <a href="#" class="join">join</a> </div>-->
+        <!--        <div class="title_box">Newsletter</div>
+                <div class="border_box">
+                    <input type="text" name="newsletter" class="newsletter_input" value="your email"/>
+                    <a href="#" class="join">join</a> </div>-->
     </div> 
-    
+
     <section class="invoice-section">
         <h1>Login Form</h1>
         <p>${message}</p>

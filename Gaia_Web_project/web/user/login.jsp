@@ -26,7 +26,7 @@ A html5 shiv link has also been added into the head section ---  Yong Deng-->
     </head>
 
     <c:import url="/Include/header.jsp" />
-    
+
     <div class="left_content">
         <div class="title_box">Plant &amp; Planters</div>
         <ul class="left_menu">
@@ -43,12 +43,12 @@ A html5 shiv link has also been added into the head section ---  Yong Deng-->
         </ul>
         <div class="title_box">Guide</div>
         <ul class="left_menu">
-            <li class="odd"><a href="#">Fall Containers</a></li>
-            <li class="even"><a href="#">Meet Cool Wave</a></li>
-            <li class="odd"><a href="#">Tips:Planting</a></li>
-            <li class="even"><a href="#">Plant, Trees and Shrubs</a></li>
-            <li class="odd"><a href="#">Easy Care Garden</a></li>
-            <li class="even"><a href="#">Plant a Bulb Garden</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Fall Containers</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Meet Cool Wave</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Tips:Planting</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Plant, Trees and Shrubs</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Easy Care Garden</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Plant a Bulb Garden</a></li>
         </ul>
         <div class="title_box">Newsletter</div>
         <div class="border_box">

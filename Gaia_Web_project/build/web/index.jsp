@@ -4,7 +4,6 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!--I moved the <head> section from the header.html file and put at the top of each jsp/html file
     so that a specific head section can be applied to each individual view.
@@ -13,7 +12,8 @@ A html5 shiv link has also been added into the head section ---  Yong Deng-->
 <html>
     <head>
         <title>Gaia's plant world</title>
-        <meta charset="UTF-8">
+        <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
         <!--changed charset to utf-8-->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="<c:url value='/style/style.css'/>" />

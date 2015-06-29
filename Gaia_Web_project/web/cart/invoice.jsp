@@ -35,12 +35,12 @@
         </ul>
         <div class="title_box">Guide</div>
         <ul class="left_menu">
-            <li class="odd"><a href="#">Fall Containers</a></li>
-            <li class="even"><a href="#">Meet Cool Wave</a></li>
-            <li class="odd"><a href="#">Tips:Planting</a></li>
-            <li class="even"><a href="#">Plant, Trees and Shrubs</a></li>
-            <li class="odd"><a href="#">Easy Care Garden</a></li>
-            <li class="even"><a href="#">Plant a Bulb Garden</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Fall Containers</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Meet Cool Wave</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Tips:Planting</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Plant, Trees and Shrubs</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Easy Care Garden</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Plant a Bulb Garden</a></li>
         </ul>
         <!--    <div class="title_box">Newsletter</div>
             <div class="border_box">
@@ -50,42 +50,42 @@
 
     <section class="invoice-section">
 
-                <h1>Your invoice: </h1>
-                <p>Order date: ${cart.date}</p>
+        <h1>Your invoice: </h1>
+        <p>Order date: ${cart.date}</p>
 
-                <table>
-                    <tr>
-                        <th>Quantity</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Subtotal</th>
-                    </tr>
-                    <c:forEach var="item" items="${cart.items}">
-                        <tr>
-                            <td>${item.quantity}</td>
-                            <td>${item.product.productName}</td>
-                            <td>$${item.product.price}</td>
-                            <td>${item.subTotal}</td>
-                        </tr>
-                    </c:forEach>
-                </table>
+        <table>
+            <tr>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+            </tr>
+            <c:forEach var="item" items="${cart.items}">
+                <tr>
+                    <td>${item.quantity}</td>
+                    <td>${item.product.productName}</td>
+                    <td>$${item.product.price}</td>
+                    <td>${item.subTotal}</td>
+                </tr>
+            </c:forEach>
+        </table>
 
-                <h4>Total: $${cart.total}</h4>
-                <p>Ship to: ${customer.firstName} ${customer.lastName}</p>
-                <p indent="9">${customer.street}</p>
-                <p indent="9">${customer.city} </p>
-                <p indent="9">${customer.states} ${customer.zip}</p>
-                <p indent="9">${customer.phone}</p>
-                <p indent="9">${customer.email}</p>
+        <h4>Total: $${cart.total}</h4>
+        <p>Ship to: ${customer.firstName} ${customer.lastName}</p>
+        <p indent="9">${customer.street}</p>
+        <p indent="9">${customer.city} </p>
+        <p indent="9">${customer.states} ${customer.zip}</p>
+        <p indent="9">${customer.phone}</p>
+        <p indent="9">${customer.email}</p>
 
 
-<!--                <form action="<:url value='/checkout/displayUser' />" method="post" id="float_left">
-                    <input type="submit" value="Edit Address">
-                </form>-->
+        <!--                <form action="<:url value='/checkout/displayUser' />" method="post" id="float_left">
+                            <input type="submit" value="Edit Address">
+                        </form>-->
 
-                <form action="<c:url value='/checkout/displayCreditCard' />" method="post">
-                    <input type="submit" value="Continue">
-                </form>
+        <form action="<c:url value='/checkout/displayCreditCard' />" method="post">
+            <input type="submit" value="Continue">
+        </form>
     </section>
 
     <!-- end middle column -->

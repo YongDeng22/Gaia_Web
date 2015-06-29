@@ -5,8 +5,7 @@
 <html>
     <head>
         <title>Gaia's plant world</title>
-        <meta charset="UTF-8">
-        <!--changed charset to utf-8-->
+
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="<c:url value='/style/style.css'/>" />
         <link rel="stylesheet" type="text/css" href="<c:url value='/style/book.css'/>" />
@@ -16,10 +15,10 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
 <!--        <![endif]-->
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <script type="text/javascript" src="../js/boxOver.js"></script>
+        <script type="text/javascript" src="<c:url value='/js/boxOver.js'/>"></script>
         <!-- JavaScript HTML requirements -->
-        <script src="../js/image_swap_library.js"></script>
-        <script src="../js/image_swap.js"></script>
+        <script src="<c:url value='/js/image_swap_library.js'/>"></script>
+        <script src="<c:url value='/js/image_swap.js'/>"></script>
 
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
@@ -71,17 +70,17 @@
 
                     <div class="single_small_image_list">
                         <div class="image_single_list">
-                            <a href="../image/books/200111.jpg" >
+                            <a href="../image/books/s${book.productID}1.jpg" >
                                 <img src="../image/books/s${book.productID}1.jpg" alt="" width="75">
                             </a>
                         </div>
                         <div class="image_single_list">
-                            <a href="../image/books/200211.jpg" >
+                            <a href="../image/books/s${book.productID}2.jpg" >
                                 <img src="../image/books/s${book.productID}2.jpg" alt="" width="75">
                             </a>
                         </div>
                         <div class="image_single_list">
-                            <a href="../image/books/200311.jpg" >
+                            <a href="../image/books/s${book.productID}3.jpg" >
                                 <img src="../image/books/s${book.productID}3.jpg" alt="" width="75">
                             </a>
                         </div>

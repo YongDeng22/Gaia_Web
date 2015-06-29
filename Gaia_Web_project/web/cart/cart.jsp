@@ -40,12 +40,12 @@
         </ul>
         <div class="title_box">Guide</div>
         <ul class="left_menu">
-            <li class="odd"><a href="#">Fall Containers</a></li>
-            <li class="even"><a href="#">Meet Cool Wave</a></li>
-            <li class="odd"><a href="#">Tips:Planting</a></li>
-            <li class="even"><a href="#">Plant, Trees and Shrubs</a></li>
-            <li class="odd"><a href="#">Easy Care Garden</a></li>
-            <li class="even"><a href="#">Plant a Bulb Garden</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Fall Containers</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Meet Cool Wave</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Tips:Planting</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Plant, Trees and Shrubs</a></li>
+            <li class="odd"><a href="<c:url value='/under_const.html'/>">Easy Care Garden</a></li>
+            <li class="even"><a href="<c:url value='/under_const.html'/>">Plant a Bulb Garden</a></li>
         </ul>
         <!--    <div class="title_box">Newsletter</div>
             <div class="border_box">
@@ -121,8 +121,8 @@
         <c:choose>
             <c:when test="${cart != null}">
                 <form action="<c:url value='/checkout/checkUser'/>" method="POST" id="continue-shopping">
-                <input type="submit" value="Checkout">
-            </form>
+                    <input type="submit" value="Checkout">
+                </form>
             </c:when>
         </c:choose>    
 
