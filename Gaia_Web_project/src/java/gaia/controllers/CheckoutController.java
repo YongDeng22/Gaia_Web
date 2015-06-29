@@ -167,8 +167,8 @@ public class CheckoutController extends HttpServlet {
                 + "You should receive your order in 3-5 business days. "
                 + "Please contact us if you have any questions.\n"
                 + "Have a great day and thanks again!\n\n"
-                + "Joe King\n"
-                + "Gais&apos;s Plant World";
+                + "Yong Deng\n"
+                + "Gaia's Plant World";
         session.setAttribute("message", message);
         boolean isBodyHTML = false;
         try {
