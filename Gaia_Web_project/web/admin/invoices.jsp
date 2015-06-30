@@ -20,7 +20,7 @@
         <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
         <![endif]-->
-        <script type="text/javascript" src="js/boxOver.js"></script>
+<!--        <script type="text/javascript" src="/js/boxOver.js"></script>-->
     </head>
 
     <c:import url="/Include/header.jsp" />
@@ -54,7 +54,7 @@
                 <a href="#" class="join">join</a> </div>-->
     </div>
 
-    <section id="admin">
+    <section id="invoice-section">
 
         <h1>Invoices to be processed:</h1>
 
@@ -64,7 +64,7 @@
 
 
         <c:if test="${unprocessedInvoices != null}">
-            <table>
+            <table id="invoice-table">
 
                 <tr>
                     <td></td>
@@ -86,7 +86,7 @@
             </table>
         </c:if>
 
-        <form action="<c:url value='/admin'/>" method="post">
+        <form action="<c:url value='/adminController'/>" method="post">
             <input type=submit value="Go Back to Menu">
         </form>
 

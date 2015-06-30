@@ -31,7 +31,7 @@ public class AdminController extends HttpServlet {
             throws IOException, ServletException {
 
         String requestURI = request.getRequestURI();
-        String url = "/admin/index.jsp";
+        String url = "/adminController";
         if (requestURI.endsWith("/displayInvoices")) {
             url = displayInvoices(request, response);
         } else if (requestURI.endsWith("/processInvoice")) {
@@ -49,7 +49,7 @@ public class AdminController extends HttpServlet {
             throws IOException, ServletException {
 
         String requestURI = request.getRequestURI();
-        String url = "/admin";
+        String url = "/adminController";
         if (requestURI.endsWith("/displayInvoice")) {
             url = displayInvoice(request, response);
         } else if (requestURI.endsWith("/displayInvoices")) {
@@ -80,6 +80,9 @@ public class AdminController extends HttpServlet {
         return url;
     }
 
+    
+    
+    
     private String displayInvoice(HttpServletRequest request,
             HttpServletResponse response) {
 
@@ -96,6 +99,8 @@ public class AdminController extends HttpServlet {
                 break;
             }
         }
+        System.out.println("*****"+order.getOrderNumber());
+        System.out.println("@@@@@@@"+order);
 
         session.setAttribute("order", order);
 
@@ -109,7 +114,7 @@ public class AdminController extends HttpServlet {
         Orders order = (Orders) session.getAttribute("order");
         OrderDB.update(order);
 
-        return "/adminController/displayInvoices";
+        return "/admin/displayInvoices";
     }
 
 }

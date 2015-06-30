@@ -138,6 +138,7 @@ public class CheckoutController extends HttpServlet {
         order.setPurchaseDate(today);
         for (OrderLine orderLine : cart.getItems()) {
             orderLine.setOrders(order);
+            orderLine.setOrdersOrderNumber(order);
         }
         order.setOrderLineCollection(cart.getItems());
 

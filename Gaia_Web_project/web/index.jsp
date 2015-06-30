@@ -128,7 +128,7 @@ A html5 shiv link has also been added into the head section ---  Yong Deng-->
             <div class="top_prod_box"></div>
             <div class="center_prod_box">
                 <div class="product_img"><a href="zone.jsp"><img src="image/hardiness.png" alt="" border="0" width="120" height="100"/></a></div>
-                <div class="product_title"><a href="zone.jsp">Cold Hardiness Zone Map</a></div>
+                <div class="product_title"><a href="zone.jsp">Hardiness Zone</a></div>
             </div>
         </div>
 

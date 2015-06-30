@@ -46,7 +46,7 @@ public class Login implements Serializable {
     @OneToOne
     private Customer customerCustID;
     @Column(name = "UserRole")
-    private String userRole;
+    private String userRole = "customer";
 
     public Login() {
     }

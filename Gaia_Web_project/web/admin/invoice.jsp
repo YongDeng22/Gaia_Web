@@ -20,7 +20,7 @@
         <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
         <![endif]-->
-        <script type="text/javascript" src="js/boxOver.js"></script>
+        <!--        <script type="text/javascript" src="/js/boxOver.js"></script>-->
     </head>
 
     <c:import url="/Include/header.jsp" />
@@ -56,22 +56,12 @@
 
     <!-- begin middle column -->
 
-    <section id="admin">
+    <section id="invoice-section">
 
         <h1>Your invoice</h1>
-
-        <table>
-            <tr>
-                <td><b>Date</b></td>
-                <td>${order.puchaseDate}</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><b>Ship To</b></td>
-                <td>${order.customer.street}, ${order.customer.city}, ${order.customer.state}&nbsp;${order.customer.zip}</td>
-                <td></td>
-            </tr>
-            <tr><td colspan="3"><hr></td></tr>
+        <h4>Date:&nbsp;${order.purchaseDate}</h4>
+        <h4>Ship To: ${order.customer.street}, ${order.customer.city}, ${order.customer.states}&nbsp;${order.customer.zip}</h4>
+        <table id="invoice-table">
             <tr>
                 <td><b>Quantity</b></td>
                 <td><b>Description</b></td>
@@ -82,22 +72,17 @@
             <c:forEach var="item" items="${order.orderLineCollection}">
                 <tr>
                     <td>${item.quantity}</td>
-                    <td>${item.product.description}</td>
-                    <td>$${item.price}</td>
+                    <td>${item.product.productName}</td>
+                    <td>$${item.product.price}</td>
                     <td>$${item.subTotal}</td>
                 </tr>
             </c:forEach>
-
         </table>
-
-
-        <label>Email Address</label>
-        <span>${order.customer.email}</span><br>
-
-        <form action="processInvoice" method="post">
+        <h4>Email Address: ${order.customer.email}</h4>
+        <form action="<c:url value='/adminController/processInvoice'/>" method="post">
             <input type="submit" value="Process Invoice">
         </form>
-        <form action="displayInvoices" method="post">
+        <form action="<c:url value='/adminController/displayInvoices'/>" method="post">
             <input type="submit" value="View Unprocessed Invoices">
         </form>
 

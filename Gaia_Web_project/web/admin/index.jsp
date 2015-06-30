@@ -14,12 +14,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="<c:url value='/style/style.css'/>" />
         <link rel="stylesheet" type="text/css" href="<c:url value='/style/book.css'/>" />
-        <link rel="stylesheet" type="text/css" href="<c:url value='/style/cart.css'/>" />
+        <link rel="stylesheet" type="text/css" href="<c:url value='/style/login.css'/>" />
         <!--added HTML5 shiv-->
         <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
         <![endif]-->
-        <script type="text/javascript" src="js/boxOver.js"></script>
+<!--        <script type="text/javascript" src="/js/boxOver.js"></script>-->
     </head>
 
     <c:import url="/Include/header.jsp" />
@@ -52,7 +52,8 @@
                 <input type="text" name="newsletter" class="newsletter_input" value="your email"/>
                 <a href="#" class="join">join</a> </div>-->
     </div>
-    <section id="admin">
+        
+    <section class="invoice-section">
 
         <h1>Admin Menu</h1>
 
@@ -60,9 +61,9 @@
         <form action="<c:url value='/adminController/displayInvoices'/>" method="post">
             <input type="submit" value="Process Invoices" class="left_margin">
         </form>
-        <form action="reports.jsp" method="post">
+<!--        <form action="reports.jsp" method="post">
             <input type="submit" value="Display Reports" class="left_margin">
-        </form>
+        </form>-->
 
     </section>
 

@@ -76,3 +76,31 @@ input[type="submit"], textarea {
 #continue-shopping input[type="submit"]{
     width: 150px;
 }
+
+#invoice-section {
+    width: 590px;
+    float:right;
+}
+
+#invoice-table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    vertical-align: middle;
+    padding: 5px;
+    text-align: left;
+    width:auto;
+    height: 25px;
+}
+
+#invoice-table th, td {
+    border:1px solid black;
+    padding: 5px;
+}
+
+#invoice-section input[type="submit"] {
+    width: 220px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: lightgreen;
+}

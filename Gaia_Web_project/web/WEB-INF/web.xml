@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-        <!-- define a context initialization parameter -->
+    <!-- define a context initialization parameter -->
     <context-param>
         <param-name>custServEmail</param-name>
         <param-value>custserv@gaias.com</param-value>
@@ -66,10 +66,63 @@
         <url-pattern>/customer/*</url-pattern>
     </servlet-mapping>
     
-<!--    <servlet-mapping>
-        <servlet-name>CustomerController</servlet-name>
+    <servlet>
+        <servlet-name>AdminController</servlet-name>
+        <servlet-class>gaia.controllers.AdminController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
+        <url-pattern>/adminController/*</url-pattern>
+    </servlet-mapping>
+<!--    
+    <servlet-mapping>
+        <servlet-name>AdminController</servlet-name>
         <url-pattern>/j_security_check</url-pattern>
     </servlet-mapping>-->
+    
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+    
+    <!-- Define two security roles -->
+    <security-role>
+        <description>Administrator</description>
+        <role-name>admin</role-name>
+    </security-role>
+    <security-role>
+        <description>Customer</description>
+        <role-name>customer</role-name>
+    </security-role>
+
+    <security-constraint>
+        <!-- Restrict access to the URLs in the admin directory -->
+        <web-resource-collection>
+            <web-resource-name>Administrator</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+
+        <!-- Authorize the service and programmer roles -->
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+        
+        <!--Forces a secure connection - remove comments to enable--> 
+        
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>                
+    </security-constraint>
+
+     <!--Use form-based authentication to provide access--> 
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/login.jsp</form-login-page>
+            <form-error-page>/login_error.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+    
     
     <session-config>
         <session-timeout>
@@ -77,12 +130,5 @@
         </session-timeout>
     </session-config>
     
-    <!--set inital text for login/sign in/logout link in the header-->
-<!--    <context-param>
-        <init-param> 
-            <param-name>loginLinkLabel</param-name>
-            <param-value>Login</param-value>
-        </init-param>
-    </context-param>
-    -->
+
 </web-app>

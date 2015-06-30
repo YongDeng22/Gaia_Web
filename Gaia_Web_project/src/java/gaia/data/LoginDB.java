@@ -99,6 +99,22 @@ public class LoginDB {
         }
     }
     
+        public static String selectUserRole(String userName) {
+        EntityManager em = DButil.getEmFactory().createEntityManager();
+        String qString = "SELECT c FROM Login c " +
+                "WHERE c.userRole = :userRole";
+        TypedQuery<Login> q = em.createQuery(qString, Login.class);
+        q.setParameter("userName", userName);
+        try {
+            Login login = q.getSingleResult();
+            return login.getUserRole();
+        } catch (NoResultException e) {
+            return null;
+        } finally {
+            em.close();
+        }
+    }
+    
     public static boolean userExists(String username, String password) {
         Login l = selectLogin(username, password);   
         return l != null;

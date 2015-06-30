@@ -61,12 +61,15 @@
         <div id="header">
             <div id="logo"> <a href="index.jsp"><img src="<c:url value='/image/logo.png'/>" alt="Gaia's plant world" border="0" width="290"/></a> </div>
             <section id="header_box">
-                <a class="XXX" href="<c:url value='/cart/cart.jsp'/>"><input type="button" value="Cart"></a>
+                <a class="XXX" href="<c:url value='/admin/index.jsp'/>"><input type="button" value="Admin"></a>
+                <a class="XXX" href="<c:url value='/cart/cart.jsp' />"><input type="button" value="Cart"></a>
                     <c:choose>
                         <c:when test="${login == null}">
-                        <a class="XXX" href="<c:url value='/user/login.jsp'/>"><input type="button" value="Login"></a>
-                        </c:when>
-                        <c:otherwise>
+                        <form class="XXX" method="POST" action="<c:url value='/customer/login'/>">
+                            <input type="submit" value="Login">
+                        </form>                        
+                    </c:when>
+                    <c:otherwise>
                         <form class="XXX" method="POST" action="<c:url value='/customer/logout'/>">
                             <input type="submit" value="Logout">
                         </form>
