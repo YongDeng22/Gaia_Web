@@ -20,7 +20,7 @@
         <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js"></script>
         <![endif]-->
-<!--        <script type="text/javascript" src="/js/boxOver.js"></script>-->
+        <!--        <script type="text/javascript" src="/js/boxOver.js"></script>-->
     </head>
 
     <c:import url="/Include/header.jsp" />
@@ -86,9 +86,9 @@
             </table>
         </c:if>
 
-        <form action="<c:url value='/adminController'/>" method="post">
+        <br/><a href="<c:url value='/admin/index.jsp'/>">
             <input type=submit value="Go Back to Menu">
-        </form>
+        </a>
 
     </section>
 

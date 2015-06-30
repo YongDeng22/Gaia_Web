@@ -180,12 +180,12 @@ public class Orders implements Serializable {
         return "gaia.business.Orders[ orderNumber=" + orderNumber + " ]";
     }
 
-    public Boolean getIsProcessed() {
-        return isProcessed;
-    }
-
-    public void setIsProcessed(Boolean isProcessed) {
-        this.isProcessed = isProcessed;
-    }
+//    public Boolean getIsProcessed() {
+//        return isProcessed;
+//    }
+//
+//    public void setIsProcessed(Boolean isProcessed) {
+//        this.isProcessed = isProcessed;
+//    }
 
 }

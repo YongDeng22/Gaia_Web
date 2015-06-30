@@ -80,9 +80,6 @@ public class AdminController extends HttpServlet {
         return url;
     }
 
-    
-    
-    
     private String displayInvoice(HttpServletRequest request,
             HttpServletResponse response) {
 
@@ -112,9 +109,9 @@ public class AdminController extends HttpServlet {
         HttpSession session = request.getSession();
 
         Orders order = (Orders) session.getAttribute("order");
+        order.setIsProcessed(Boolean.TRUE);
         OrderDB.update(order);
-
-        return "/admin/displayInvoices";
+        return displayInvoices(request, response);
+//        return "/admin/invoices.jsp";
     }
-
 }
