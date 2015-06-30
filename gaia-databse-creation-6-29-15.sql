@@ -163,23 +163,6 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `Gaia`.`OrderLine`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Gaia`.`OrderLine` (
-  `OrderNumber` INT(11) NOT NULL AUTO_INCREMENT,
-  `ProductID` INT(11) NULL DEFAULT '0',
-  `Quantity` INT(11) NULL DEFAULT NULL,
-  `Orders_OrderNumber` INT(11) NULL DEFAULT NULL,
-  `subTotal` VARCHAR(45) NULL DEFAULT NULL,
-  PRIMARY KEY (`OrderNumber`),
-  INDEX `fk_OrderLine_Orders1_idx` (`Orders_OrderNumber` ASC),
-  INDEX `ProductID_idx` (`ProductID` ASC))
-ENGINE = InnoDB
-AUTO_INCREMENT = 5
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
 -- Table `Gaia`.`Orders`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Gaia`.`Orders` (
@@ -202,7 +185,29 @@ CREATE TABLE IF NOT EXISTS `Gaia`.`Orders` (
     ON DELETE NO ACTION
     ON UPDATE CASCADE)
 ENGINE = InnoDB
-AUTO_INCREMENT = 13
+AUTO_INCREMENT = 19
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
+-- Table `Gaia`.`OrderLine`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `Gaia`.`OrderLine` (
+  `OrderNumber` INT(11) NOT NULL AUTO_INCREMENT,
+  `ProductID` INT(11) NULL DEFAULT '0',
+  `Quantity` INT(11) NULL DEFAULT NULL,
+  `Orders_OrderNumber` INT(11) NULL DEFAULT NULL,
+  `subTotal` VARCHAR(45) NULL DEFAULT NULL,
+  PRIMARY KEY (`OrderNumber`),
+  INDEX `fk_OrderLine_Orders1_idx` (`Orders_OrderNumber` ASC),
+  INDEX `ProductID_idx` (`ProductID` ASC),
+  CONSTRAINT `Orders_OrderNumber`
+    FOREIGN KEY (`Orders_OrderNumber`)
+    REFERENCES `Gaia`.`Orders` (`OrderNumber`)
+    ON DELETE NO ACTION
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+AUTO_INCREMENT = 14
 DEFAULT CHARACTER SET = utf8;
 
 

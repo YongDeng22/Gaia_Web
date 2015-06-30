@@ -207,15 +207,16 @@ DROP TABLE IF EXISTS `OrderLine`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `OrderLine` (
-  `OrderNumber` int(11) NOT NULL,
+  `OrderNumber` int(11) NOT NULL AUTO_INCREMENT,
   `ProductID` int(11) DEFAULT '0',
   `Quantity` int(11) DEFAULT NULL,
   `Orders_OrderNumber` int(11) DEFAULT NULL,
   `subTotal` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`OrderNumber`),
   KEY `fk_OrderLine_Orders1_idx` (`Orders_OrderNumber`),
-  KEY `ProductID_idx` (`ProductID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  KEY `ProductID_idx` (`ProductID`),
+  CONSTRAINT `Orders_OrderNumber` FOREIGN KEY (`Orders_OrderNumber`) REFERENCES `Orders` (`OrderNumber`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -224,7 +225,7 @@ CREATE TABLE `OrderLine` (
 
 LOCK TABLES `OrderLine` WRITE;
 /*!40000 ALTER TABLE `OrderLine` DISABLE KEYS */;
-INSERT INTO `OrderLine` VALUES (1,200001,1,NULL,NULL);
+INSERT INTO `OrderLine` VALUES (10,200011,3,17,'15.00'),(11,200001,2,17,'19.98'),(12,200015,1,18,'11.97'),(13,200011,1,18,'5.00');
 /*!40000 ALTER TABLE `OrderLine` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -246,7 +247,7 @@ CREATE TABLE `Orders` (
   KEY `CustID_idx` (`CustID`),
   CONSTRAINT `CustID` FOREIGN KEY (`CustID`) REFERENCES `Customer` (`CustID`) ON DELETE NO ACTION ON UPDATE CASCADE,
   CONSTRAINT `fk_Order_Customer1` FOREIGN KEY (`Customer_CustID`) REFERENCES `Customer` (`CustID`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -255,7 +256,7 @@ CREATE TABLE `Orders` (
 
 LOCK TABLES `Orders` WRITE;
 /*!40000 ALTER TABLE `Orders` DISABLE KEYS */;
-INSERT INTO `Orders` VALUES (1,100001,NULL,NULL,'1');
+INSERT INTO `Orders` VALUES (17,100009,'2015-06-29 20:25:23',100009,'0'),(18,100009,'2015-06-29 20:26:00',100009,'0');
 /*!40000 ALTER TABLE `Orders` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -411,4 +412,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-06-29 10:02:51
+-- Dump completed on 2015-06-29 21:19:31
