@@ -16,10 +16,9 @@ public class CustomerController extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response)
             throws ServletException, IOException {
-//        String url = "/user/register.jsp";
+        String url = "/user/login.jsp";
         String requestURI = request.getRequestURI();
 
-        String url = "";
         if (requestURI.endsWith("/login")) {
             url = login(request, response);
         } else if (requestURI.endsWith("/register")) {
